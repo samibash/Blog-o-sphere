@@ -20,11 +20,11 @@ Users being able to create a written piece
 => updating that same piece
 => reading that same piece
 => and deleting that same piece
+=> Commenting on other user's pieces
 
 # Post-MVP
 Auth login
 Profile creation, other users
-Commenting on other user's pieces
 
 
 # Entity Relationship Diagram (ERD):

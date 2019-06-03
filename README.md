@@ -5,15 +5,17 @@ I'm planning to build a blogging app for writers who want to broadcast their opi
 
 
 # Technologies Used:
-  React
-  Sequelize
-  Express
-  Bulma
+-React  
+-Sequelize
+
+-Express
+
+-Bulma
 
 # User Story:
 I think my users are people who enjoy and are excited to express their views on important topics and share them with friends, family, and strangers alike.
 
-    “As an opinionated writer, I want to write my thoughts down on a particular issue online so that i can have an audience of      strangers/friends/family that will read, react, and comment on them.”
+    “As an opinionated writer, I want to write my thoughts down on a particular issue online so that i can have an audience of strangers/friends/family that will read, react, and comment on them.”
 
 # MVP
 Users being able to create a written piece

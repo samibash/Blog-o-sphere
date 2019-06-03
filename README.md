@@ -7,9 +7,7 @@ I'm planning to build a blogging app for writers who want to broadcast their opi
 # Technologies Used:
 -React  
 -Sequelize
-
 -Express
-
 -Bulma
 
 # User Story:
@@ -30,7 +28,7 @@ Commenting on other user's pieces
 
 
 # Entity Relationship Diagram (ERD):
-![IMG_5175](https://user-images.githubusercontent.com/45145737/58824593-6e4f5a80-860a-11e9-8ee5-dc40d6a82dd8.jpg)
+![IMG_5180](https://user-images.githubusercontent.com/45145737/58841856-afab2e80-8639-11e9-80ac-c3d79c8bb78d.jpg)
 
 
 

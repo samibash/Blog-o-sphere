@@ -48,6 +48,23 @@ postRouter.delete('/posts/:id', async (request, response) => {
     }
 });
 
+postRouter.put('/posts/:id', async (request, response) => {
+    try {
+      const id = request.params.id;
+      const post = await Post.findByPk(id);
+      
+      if (post) await post.update(request.body);
+      response.json({
+        post
+      });
+    } catch(e) {
+      response.json({
+        message: e.message
+      });
+    }
+});
+
+
 
 
 module.exports = postRouter;

@@ -7,7 +7,9 @@ I'm planning to build a blogging app for writers who want to broadcast their opi
 # Technologies Used:
 -React  
 -Sequelize
+
 -Express
+
 -Bulma
 
 # User Story:

@@ -4,7 +4,11 @@
   "description": "# Summary: I'm planning to build a blogging app for writers who want to broadcast their opinions on topics that are important to them, and have other bloggers comment and react to each others’ pieces so it becomes a lively dialogue.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:init": "dropdb --if-exists blog_db && createdb blog_db",
+    "db:reset": "node ./scripts/resetDb",
+    "db:seed": "node ./scripts/seedDb",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",

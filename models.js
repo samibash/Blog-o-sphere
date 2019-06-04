@@ -19,7 +19,7 @@ const User = db.define('user', {
   const Post = db.define('post', {
     title: Sequelize.STRING,
     genre: Sequelize.STRING,
-    content:Sequelize.STRING
+    content:Sequelize.STRING(5000)
   });
 
   const Comment = db.define('comment', {

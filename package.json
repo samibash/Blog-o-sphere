@@ -1,0 +1,27 @@
+{
+  "name": "Blog-o-sphere",
+  "version": "1.0.0",
+  "description": "# Summary: I'm planning to build a blogging app for writers who want to broadcast their opinions on topics that are important to them, and have other bloggers comment and react to each others’ pieces so it becomes a lively dialogue.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samibash/Blog-o-sphere.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samibash/Blog-o-sphere/issues"
+  },
+  "homepage": "https://github.com/samibash/Blog-o-sphere#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "pg": "^7.11.0",
+    "sequelize": "^5.8.7"
+  }
+}

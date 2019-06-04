@@ -12,4 +12,19 @@ userRouter.get('/users', async (request, respond) => {
   }
 });
 
+userRouter.get('/users/:id', async (request, response) => {
+    try {
+      const id = request.params.id;
+      const user = await User.findByPk(id)
+  
+      if (!user) throw Error('Post not found! EEEEEEKKK');
+  
+      response.json({
+        user
+      })
+    } catch (e) {
+      response.status(500).json({ msg: e.message })
+    }
+});
+
 module.exports = userRouter;

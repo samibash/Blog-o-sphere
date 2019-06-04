@@ -1,4 +1,5 @@
 # Blog-o-sphere
+![](https://i.imgur.com/mRPKozg.png)
 
 # Summary:
 I'm planning to build a blogging app for writers who want to broadcast their opinions on topics that are important to them, and have other bloggers comment and react to each others’ pieces so it becomes a lively dialogue.

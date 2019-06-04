@@ -12,41 +12,35 @@ const db = new Sequelize({
 //   Model Definitions 
 
 const User = db.define('user', {
-    name: Sequelize.STRING,   
+    user_name: Sequelize.STRING,
+    name: Sequelize.STRING
   });
 
-  const WrittenPiece = db.define('written-piece', {
+  const Post = db.define('post', {
     title: Sequelize.STRING,
-    genre: Sequelize.STRING
+    genre: Sequelize.STRING,
+    content:Sequelize.STRING
   });
 
   const Comment = db.define('comment', {
     name: Sequelize.STRING, 
-    caption: Sequelize.STRING
+    content: Sequelize.STRING
   });
 
 //    Model Associations 
-
-    User.hasMany(WrittenPiece, {
-        onDelete: 'cascade'
-    });
     
-    WrittenPiece.belongsTo(User)
-    
-
-
-    WrittenPiece.hasMany(Comment, {
-        onDelete: 'cascade'
-    });
-    
-    Comment.belongsTo(WrittenPiece)
-    
+    Comment.belongsTo(Post);
+    Post.belongsTo(User);
+    Comment.belongsTo(User);
+    User.hasMany(Comment);
+    User.hasMany(Post);
+    Post.hasMany(Comment);
   
 
   module.exports = {
     db,
     User,
-    WrittenPiece,
+    Post,
     Comment
   }
   

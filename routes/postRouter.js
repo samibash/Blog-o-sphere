@@ -3,12 +3,12 @@ const { Post } = require('../models');
 const postRouter = express.Router();
 
 
-postRouter.get('/posts', async (request, respond) => {
+postRouter.get('/posts', async (request, response) => {
   try {
     const allPosts = await Post.findAll()
-    respond.json(allPosts)
+    response.json(allPosts)
   } catch (error) {
-    respond.json({ msg: error.status })
+    response.json({ msg: error.status })
   }
 });
 
@@ -25,7 +25,7 @@ postRouter.get('/posts/:id', async (request, response) => {
     } catch (e) {
       response.status(500).json({ msg: e.message })
     }
-  });
+});
 
 postRouter.post('/posts', async (request, response) => {
     try {
@@ -36,8 +36,18 @@ postRouter.post('/posts', async (request, response) => {
     } catch (e) {
       response.status(500).json({ msg: e.message })
     }
-  });
+});
 
-  
+postRouter.delete('/posts/:id', async (request, response) => {
+    try {
+      const deletion = await Post.findByPk(request.params.id);
+      await deletion.destroy();
+      response.send(deletion);
+    } catch (e) {
+      console.log(e.message);
+    }
+});
+
+
 
 module.exports = postRouter;

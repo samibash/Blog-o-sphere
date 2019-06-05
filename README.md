@@ -1,4 +1,5 @@
 # Blog-o-sphere
+![](https://i.imgur.com/mRPKozg.png)
 
 # Summary:
 I'm planning to build a blogging app for writers who want to broadcast their opinions on topics that are important to them, and have other bloggers comment and react to each others’ pieces so it becomes a lively dialogue.
@@ -28,6 +29,11 @@ Users being able to create a written piece
 Auth login
 Profile creation, other users
 
+# Wireframes
+
+<a href="https://imgur.com/6SmM6Sn"><img src="https://i.imgur.com/6SmM6Sn.jpg" title="source: imgur.com" /></a>
+
+<a href="https://imgur.com/XdXP37a"><img src="https://i.imgur.com/XdXP37a.jpg" title="source: imgur.com" /></a>
 
 # Entity Relationship Diagram (ERD):
 ![IMG_5180](https://user-images.githubusercontent.com/45145737/58841856-afab2e80-8639-11e9-80ac-c3d79c8bb78d.jpg)

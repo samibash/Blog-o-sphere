@@ -6,8 +6,34 @@ import NavBar from './components/NavBar';
 import Posts from './components/Posts';
 import Upload from './components/Upload';
 
+import { fetchAllPosts } from './services/Posts';
+
+
 
 export default class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      myposts: [],
+      allposts: [],
+      upload: []
+    }
+    this.fetchPostData=this.fetchPostData.bind(this)
+  }
+
+  fetchPostData = async ()=>{
+    const allposts =  await fetchAllPosts()
+    this.setState({
+      allposts: allposts
+    })
+    console.log(allposts)
+    }
+
+  componentDidMount(){
+    this.fetchPostData()
+  }
+
   render() {
     return (
       <div className="App">
@@ -15,7 +41,7 @@ export default class App extends Component {
           <NavBar />
           <Switch>
             <Route path='/' exact component={ HomePage }/>
-            <Route path='/posts' exact component={ Posts }/>
+            <Route exact path='/posts' render={()=> <Posts  allposts={this.state.allposts}/>} />
             <Route path='/upload' exact component={ Upload }/>
           </Switch>
         </div>

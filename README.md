@@ -29,6 +29,11 @@ Users being able to create a written piece
 Auth login
 Profile creation, other users
 
+# Wireframes
+
+<a href="https://imgur.com/6SmM6Sn"><img src="https://i.imgur.com/6SmM6Sn.jpg" title="source: imgur.com" /></a>
+
+<a href="https://imgur.com/XdXP37a"><img src="https://i.imgur.com/XdXP37a.jpg" title="source: imgur.com" /></a>
 
 # Entity Relationship Diagram (ERD):
 ![IMG_5180](https://user-images.githubusercontent.com/45145737/58841856-afab2e80-8639-11e9-80ac-c3d79c8bb78d.jpg)

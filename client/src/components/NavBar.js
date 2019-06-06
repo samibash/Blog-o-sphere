@@ -7,10 +7,10 @@ export default class NavBar extends Component {
     render() {
         return (
             <header>
-                <nav className="navbar" role="navigation" aria-label="main navigation">
+                <nav className="navbar-start" role="navigation" aria-label="main navigation">
                     <div className="navbar-brand">
-                        <img className="logo" src="https://i.imgur.com/mRPKozg.png"/>                        
-                        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <img className="logo" src="https://i.imgur.com/mRPKozg.png" alt="blog-o-logo"/>                        
+                        <a href="http://localhost:3000" role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true" />
                         <span aria-hidden="true" />
                         <span aria-hidden="true" />

@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { Redirect } from 'react-router';
 import axios from 'axios';
-// import { createPost } from '../services/Upload';
 
 export default class Upload extends Component {
     constructor(props) {
@@ -34,16 +33,6 @@ export default class Upload extends Component {
                 console.log(res);
                 console.log(res.data);
             })
-        // const newposting = await createPost(newposting)
-       
-        // await this.setState({
-        //     title: this.state.title,
-        //     genre: this.state.genre,
-        //     content: this.state.content,
-        //     created: true
-        // })
-       
-        // this.props.upload
         console.log(this.state)
     }
 

@@ -28,7 +28,7 @@ export default class App extends Component {
       allposts: allposts
     })
     console.log(allposts)
-    }
+  }
 
   componentDidMount(){
     this.fetchPostData()
@@ -42,7 +42,7 @@ export default class App extends Component {
           <Switch>
             <Route path='/' exact component={ HomePage }/>
             <Route exact path='/posts' render={()=> <Posts  allposts={this.state.allposts} upload={this.fetchPostData}/>} />
-            <Route path='/upload' exact component={ Upload } upload={this.fetchPostData}/>
+            <Route path='/upload' exact component={ Upload } />
           </Switch>
         </div>
       </div>

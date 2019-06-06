@@ -15,11 +15,25 @@ export default class Posts extends Component {
         console.log(key)
     }
 
+    handleSubmitUpdate = (key) => {
+        axios.put(`http://localhost:3001/posts/${key}`)
+            .then(res => {
+            console.log(res);
+            console.log(res.data);
+        })
+        console.log(key)
+    }
+
     componentDidMount(){
         this.props.upload()
     }
 
     render() {
+
+        // if(this.state.updated === true) {
+        //     return <Redirect to="/posts" />
+        // }
+
         let allPosts = this.props.allposts.map(post => {
             const key=post.id
             console.log(key)
@@ -29,6 +43,7 @@ export default class Posts extends Component {
                     <h5><strong>Genre</strong>: <em>{post.genre}</em></h5>
                     <p>{post.content}</p>
                         <button onClick={()=>{this.handleSubmit(key)}}>DELETE</button>
+                        <button onClick={()=>{this.handleSubmitUpdate(key)}}>UPDATE</button>
                 </div>
             )
         })

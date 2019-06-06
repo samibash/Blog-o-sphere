@@ -26,7 +26,7 @@ export default class Upload extends Component {
             "title": this.state.title,
             "genre": this.state.genre,
             "content": this.state.content,
-        }  
+        }
 
         axios.post("http://localhost:3001/posts", newPost)
             .then(res => {
@@ -34,6 +34,10 @@ export default class Upload extends Component {
                 console.log(res.data);
             })
         console.log(this.state)
+
+        this.setState({
+            created: true
+        })
     }
 
     render() {

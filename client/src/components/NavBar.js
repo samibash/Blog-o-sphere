@@ -6,7 +6,7 @@ import './NavBar.css'
 export default class NavBar extends Component {
     render() {
         return (
-            <header>
+            <header id="grad">
                 <nav className="navbar-start" role="navigation" aria-label="main navigation">
                     <div className="navbar-brand">
                         <img className="logo" src="https://i.imgur.com/mRPKozg.png" alt="blog-o-logo"/>                        

@@ -41,8 +41,8 @@ export default class App extends Component {
           <NavBar />
           <Switch>
             <Route path='/' exact component={ HomePage }/>
-            <Route exact path='/posts' render={()=> <Posts  allposts={this.state.allposts}/>} />
-            <Route path='/upload' exact component={ Upload }/>
+            <Route exact path='/posts' render={()=> <Posts  allposts={this.state.allposts} upload={this.fetchPostData}/>} />
+            <Route path='/upload' exact component={ Upload } upload={this.fetchPostData}/>
           </Switch>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import UpdatePostPage from './UpdatePostPage';
-import {Redirect} from 'react-router-dom';
+// import UpdatePostPage from './UpdatePostPage';
+// import {Redirect} from 'react-router-dom';
 import './Posts.css'
 
 export default class Posts extends Component {

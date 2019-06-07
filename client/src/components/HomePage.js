@@ -16,7 +16,7 @@ export default class HomePage extends Component {
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p class="title"><em>“I want to have a platform where my written thoughts on an important issue can have an audience of people who’ll react and comment on them. I think it’s important to further dialogue on such important issues.”</em></p>
-                        <p class="subtitle"> - Anonymous User</p>
+                        <p class="subtitle"> - User Story</p>
                         <div class="content">
                         </div>
                     </article>

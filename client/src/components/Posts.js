@@ -10,6 +10,7 @@ export default class Posts extends Component {
             title1: '',
             genre1: '',
             content1: '',
+            id: null,
             created: false,
             clicked: false
         }
@@ -17,69 +18,65 @@ export default class Posts extends Component {
 
 // Delete Function
 
-    handleSubmit = (key) => {
+    handleDelete = async () => {
     //    event.preventDefault();
         // const key=this.post.id
-        axios.delete(`http://localhost:3001/posts/${key}`)
+       await axios.delete(`http://localhost:3001/posts/${this.state.id}`)
             .then(res => {
             console.log(res);
             console.log(res.data);
         })
-        console.log(key)
     }
 
 
 // Update Function
 
-    onPostFormChange = (event) => {
-        const { name, value } = event.target
-        this.setState({ [name]: value })
+    onPostFormChange = async (event) => {
+        const name = event.target.name
+        const value = event.target.value
+       await this.setState({ [name]: value })
     }
 
 
 
-    handleSubmitUpdate = async (key) => {
-        console.log(`Post Updated:`, this.state)
+    handleSubmitUpdate = async (e) => {
+        e.preventDefault();
         const newPost = {
-            "title1": this.state.title1,
-            "genre1": this.state.genre1,
-            "content1": this.state.content1
+            "title": this.state.title1,
+            "genre": this.state.genre1,
+            "content": e.target.content1
         }
-
-        axios.put(`http://localhost:3001/posts/${key}`, newPost)
+            let newKey = Number(this.state.id)
+        await axios.put(`http://localhost:3001/posts/${newKey}`, newPost)
             .then(res => {
-            console.log(res);
-            console.log(res.data);
+            console.log(res.data.post);
         })
-        console.log(key)
     }
 
-    handleSubmitRedirect = async () => {
+    handleSubmitRedirect = async (key) => {
         await this.setState ({
+            id: key,
             clicked: true
         })
     }
 
     componentDidMount(){
-        this.props.upload()
     }
 
     render() {
 
 
         let allPosts = this.props.allposts.map(post => {
-            const key=post.id
-            console.log(key)
 
             if (this.state.clicked) {
                 return (
                   <div>
                     <div id="upload">
-                        <form onSubmit={this.handleSubmitUpdate(key)}>
+                        <form>
                             <div className="field">
                                 <label htmlFor="name">Title:</label>
                                 <div className="control">
-                                    <input 
+                                    <input
                                         className="input"
                                         type="text"
                                         placeholder="Title"
@@ -124,7 +121,7 @@ export default class Posts extends Component {
                             </div>
                             <div className="field is-grouped">
                                 <div className="control">
-                                    <button className="button is-link" type="submit">Update</button>
+                                    <button className="button is-link" type="submit"onClick={this.handleSubmitUpdate}>Update</button>
                                 </div>
                             </div>
                         </form>
@@ -132,12 +129,13 @@ export default class Posts extends Component {
                 </div>
                 )
               } else {
+                  const key = post.id
             return (
                 <article class="message is-info">
                     <div class="message-header">
                         <h2>Title: <strong>{post.title}</strong></h2>
                         <h5>Genre: <strong><em>{post.genre}</em></strong></h5>
-                        <button class="delete" aria-label="delete" onClick={()=>{this.handleSubmit(key)}}></button>
+                        <button class="delete" aria-label="delete" onClick={()=>{this.handleDelete(this.state.id)}}></button>
                     </div>
                     <div class="message-body">
                         <p>{post.content}</p>

@@ -46,40 +46,67 @@ export default class Upload extends Component {
           }
         return (
             <div>
-                <h1>This is the Upload page</h1>
                 <div id="upload">
                     <form onSubmit={this.onPostFormSubmit}>
-                        <div>              
+                        <div className="field">
                             <label htmlFor="name">Title:</label>
-                            <input 
-                                name="title"
-                                value={
-                                    this.state.title
-                                }
-                                onChange={this.onPostFormChange}
-                            />
+                            <div className="control">
+                                <input 
+                                    className="input"
+                                    type="text"
+                                    placeholder="Title"
+                                    name="title"
+                                    value={
+                                        this.state.title
+                                    }
+                                    onChange={this.onPostFormChange}
+                                />
+                            </div>
                         </div>
-                        <div>
+
+
+                        <div className="field">
                             <label htmlFor="name">Genre:</label>
-                            <input 
-                                name="genre"
-                                value={
-                                    this.state.genre
-                                }
-                                onChange={this.onPostFormChange}
-                            />
+                            <div className="control">
+                                <input 
+                                    className="input"
+                                    type="text"
+                                    placeholder="Genre"                              
+                                    name="genre"
+                                    value={
+                                        this.state.genre
+                                    }
+                                    onChange={this.onPostFormChange}
+                                />
+                            </div>
                         </div>
-                        <div>
+                        
+
+
+                        <div className="field">
                             <label htmlFor="name">Content:</label>
-                            <input
-                                name="content"
-                                value={
-                                    this.state.content
-                                }
-                                onChange={this.onPostFormChange}
-                            />
+                            <div className="control">
+                                <input
+                                    className="input"
+                                    type="text"
+                                    placeholder="Content"                                                             
+                                    name="content"
+                                    value={
+                                        this.state.content
+                                    }
+                                    onChange={this.onPostFormChange}
+                                />
+                            </div>
                         </div>
-                        <button type="submit">Add Post</button>
+
+
+
+                        <div className="field is-grouped">
+                            <div className="control">
+                                <button className="button is-link" type="submit">Submit</button>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -87,4 +114,4 @@ export default class Upload extends Component {
     }
 }
 
-
+  

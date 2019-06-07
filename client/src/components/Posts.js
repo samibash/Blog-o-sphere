@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import UpdatePostPage from './UpdatePostPage';
+import {Redirect} from 'react-router-dom';
 
 export default class Posts extends Component {
   
@@ -15,14 +17,14 @@ export default class Posts extends Component {
         console.log(key)
     }
 
-    handleSubmitUpdate = (key) => {
-        axios.put(`http://localhost:3001/posts/${key}`)
-            .then(res => {
-            console.log(res);
-            console.log(res.data);
-        })
-        console.log(key)
-    }
+    // handleSubmitUpdate = (key) => {
+    //     axios.put(`http://localhost:3001/posts/${key}`)
+    //         .then(res => {
+    //         console.log(res);
+    //         console.log(res.data);
+    //     })
+    //     console.log(key)
+    // }
 
     componentDidMount(){
         this.props.upload()
@@ -43,7 +45,8 @@ export default class Posts extends Component {
                     <h5><strong>Genre</strong>: <em>{post.genre}</em></h5>
                     <p>{post.content}</p>
                         <button onClick={()=>{this.handleSubmit(key)}}>DELETE</button>
-                        <button onClick={()=>{this.handleSubmitUpdate(key)}}>UPDATE</button>
+                        {/* <button onClick={()=>{this.handleSubmitUpdate(key)}}>UPDATE</button> */}
+                        <button>UPDATE</button>
                 </div>
             )
         })

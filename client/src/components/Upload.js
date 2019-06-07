@@ -63,8 +63,6 @@ export default class Upload extends Component {
                                 />
                             </div>
                         </div>
-
-
                         <div className="field">
                             <label htmlFor="name">Genre:</label>
                             <div className="control">
@@ -80,38 +78,30 @@ export default class Upload extends Component {
                                 />
                             </div>
                         </div>
-                        
-
-
                         <div className="field">
                             <label htmlFor="name">Content:</label>
                             <div className="control">
-                                <input
+                                <textarea 
                                     className="input"
                                     type="text"
-                                    placeholder="Content"                                                             
+                                    placeholder="Content" 
                                     name="content"
                                     value={
                                         this.state.content
                                     }
                                     onChange={this.onPostFormChange}
-                                />
+                                    rows="15">
+                                </textarea>
                             </div>
                         </div>
-
-
-
                         <div className="field is-grouped">
                             <div className="control">
                                 <button className="button is-link" type="submit">Submit</button>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
         )
     }
 }
-
-  

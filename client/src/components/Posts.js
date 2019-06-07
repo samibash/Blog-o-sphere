@@ -44,7 +44,7 @@ export default class Posts extends Component {
         const newPost = {
             "title": this.state.title1,
             "genre": this.state.genre1,
-            "content": e.target.content1
+            "content": this.state.content1
         }
             let newKey = Number(this.state.id)
         await axios.put(`http://localhost:3001/posts/${newKey}`, newPost)

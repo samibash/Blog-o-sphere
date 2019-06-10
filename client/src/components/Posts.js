@@ -18,10 +18,11 @@ export default class Posts extends Component {
 
 // Delete Function
 
-    handleDelete = async () => {
+    handleDelete = async (key) => {
+        const id = Number(key)
     //    event.preventDefault();
         // const key=this.post.id
-       await axios.delete(`http://localhost:3001/posts/${this.state.id}`)
+       await axios.delete(`http://localhost:3001/posts/${id}`)
             .then(res => {
             console.log(res);
             console.log(res.data);
@@ -135,7 +136,7 @@ export default class Posts extends Component {
                     <div class="message-header">
                         <h2>Title: <strong>{post.title}</strong></h2>
                         <h5>Genre: <strong><em>{post.genre}</em></strong></h5>
-                        <button class="delete" aria-label="delete" onClick={()=>{this.handleDelete(this.state.id)}}></button>
+                        <button class="delete" aria-label="delete" onClick={()=>{this.handleDelete(key)}}></button>
                     </div>
                     <div class="message-body">
                         <p>{post.content}</p>
